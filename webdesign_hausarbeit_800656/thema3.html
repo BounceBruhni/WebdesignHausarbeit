@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Styling mit CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            padding: 0 8px;
+        }
+        .example {
+            margin: 16px 0;
+            padding: 12px;
+            background: #e9f5ff;
+            border-radius: 5px;
+        }
+        .beispiel1 {
+            font-weight: bold;
+        }
+        .beispiel2 {
+            font-style: italic;
+        }
+        .beispiel3 {
+            text-decoration: underline;
+        }
+        .beispiel4 {
+            color: #1976d2;
+        }
+        .beispiel5 {
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Webdesign Hausarbeit – Lasse Bruhn</h1>
+</header>
+<div class="container">
+    <aside>
+        <h2>Themen</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="thema1.html">Flexbox-Layout</a></li>
+            <li><a href="thema2.html">Grid-Layout</a></li>
+            <li><a href="thema3.html">Text-Styling</a></li>
+        </ul>
+    </aside>
+    <main>
+        <h2>3. Text-Styling mit CSS</h2>
+        <p>Mit CSS lassen sich Texte auf vielfältige Weise gestalten. Dazu gehören Schriftart, -größe, -farbe, Auszeichnungen wie fett oder kursiv, Abstände und vieles mehr. Im Folgenden werden fünf wichtige Eigenschaften für das Text-Styling vorgestellt – jeweils mit Beispiel.</p>
+
+        <h3>1. font-weight</h3>
+        <p>Steuert die Dicke der Schrift, z.B. <code>font-weight: bold;</code></p>
+        <div class="example beispiel1">Dieser Text ist fett.</div>
+
+        <h3>2. font-style</h3>
+        <p>Setzt den Text kursiv, z.B. <code>font-style: italic;</code></p>
+        <div class="example beispiel2">Dieser Text ist kursiv.</div>
+
+        <h3>3. text-decoration</h3>
+        <p>Fügt dem Text z.B. eine Unterstreichung hinzu, z.B. <code>text-decoration: underline;</code></p>
+        <div class="example beispiel3">Dieser Text ist unterstrichen.</div>
+
+        <h3>4. color</h3>
+        <p>Legt die Textfarbe fest, z.B. <code>color: #1976d2;</code></p>
+        <div class="example beispiel4">Dieser Text ist blau.</div>
+
+        <h3>5. letter-spacing</h3>
+        <p>Bestimmt den Abstand zwischen den Buchstaben, z.B. <code>letter-spacing: 4px;</code></p>
+        <div class="example beispiel5">Mehr Abstand zwischen den Buchstaben</div>
+    </main>
+</div>
+<footer>
+    <p>Impressum</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flexbox Hausarbeit</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Webdesign Hausarbeit – Lasse Bruhn</h1>
+</header>
+
+<div class="container">
+    <aside>
+        <h2>Themen</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="thema1.html">Flexbox-Layout</a></li>
+            <li><a href="thema2.html">Grid-Layout</a></li>
+            <li><a href="thema3.html">Text-Styling</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>1. Flexbox-Layout</h2>
+        <p>Mit flexbox lassen sich responsive Layouts erstellen, ohne komplexe Positionierungsregeln händisch implementieren zu müssen, z.b. anhand von Positionskoordinaten jeweiliger Elemente. Elemente können innerhalb eines Containers dynamisch angeordnet, ausgerichtet und verteilt werden, ohne dass komplizierte Float- oder Positionierungsregeln nötig sind. Der Container wird mit display: flex aktiviert, und die enthaltenen Elemente passen sich automatisch an die verfügbare Fläche an. Flexbox eignet sich besonders gut für die Erstellung von Layouts, die sich an verschiedene Bildschirmgrößen anpassen sollen.</p>
+
+        <h3>1. flex-direction</h3>
+        <p>Legt die Hauptachse fest.</p>
+        <p><code>flex-direction: column</code></p>
+        <div class="example" id="flex-column">
+            <span>Element 1</span>
+            <span>Element 2</span>
+        </div>
+
+        <p><code>flex-direction: row</code> (Standard)</p>
+        <div class="example" id="flex-row">
+            <span>Element 1</span>
+            <span>Element 2</span>
+        </div>
+
+        <h3>2. flex-wrap</h3>
+        <p>Bestimmt, ob Elemente umbrechen dürfen.(Hier: <code>flex-wrap: wrap</code>)</p>
+        <div class="example" id="wrap">
+            <span>1</span><span>2</span><span>3</span>
+            <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+        </div>
+
+        <h3>3. justify-content</h3>
+        <p>Ausrichtung entlang der Hauptachse, für den Fall, dass Elemente nicht gesamten verfügbaren Platz einnehmen</p>
+        <div class="example" id="justify">
+            <span>A</span><span>B</span><span>C</span>
+        </div>
+
+        <h3>4. align-items</h3>
+        <p>Ausrichtung entlang der Querachse.</p>
+        <div class="example" id="align">
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+
+        <h3>5. gap</h3>
+        <p>Abstand zwischen Flex-Items.</p>
+        <div class="example" id="gap-example">
+            <span>X</span><span>Y</span><span>Z</span>
+        </div>
+
+        <h3>6. flex-grow</h3>
+        <p>Bestimmt, wie stark Elemente freien Platz einnehmen.</p>
+        <div class="example" id="grow">
+            <span>2x</span>
+            <span>1x</span>
+            <span>1x</span>
+        </div>
+
+    </main>
+</div>
+
+<footer>
+    <p>Impressum</p>
+</footer>
+
+</body>
+</html>
+

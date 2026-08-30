@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Layout Hausarbeit</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex: 1 0 auto;
+            width: 100%;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+            width: 100%;
+            border: 1px;
+            padding: 0 8px;
+        }
+        .example {
+            margin: 16px 0;
+            padding: 12px;
+            background: #e9f5ff;
+            border-radius: 5px;
+        }
+        /* Grid Examples */
+        #grid-container1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+        }
+        #grid-container1 div {
+            background: #b3e5fc;
+            padding: 16px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        #grid-area-example {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "sidebar content"
+                "footer footer";
+            grid-template-columns: 120px 1fr;
+            grid-template-rows: auto 120px auto;
+            gap: 8px;
+        }
+        #grid-area-example .header { grid-area: header; background: #ffd54f; }
+        #grid-area-example .sidebar { grid-area: sidebar; background: #aed581; }
+        #grid-area-example .content { grid-area: content; background: #4fc3f7; }
+        #grid-area-example .footer { grid-area: footer; background: #ff8a65; }
+        #grid-area-example > div {
+            padding: 12px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Webdesign Hausarbeit – Lasse Bruhn</h1>
+</header>
+<div class="container">
+    <aside>
+        <h2>Themen</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="thema1.html">Flexbox-Layout</a></li>
+            <li><a href="thema2.html">Grid-Layout</a></li>
+            <li><a href="thema3.html">Text-Styling</a></li>
+        </ul>
+    </aside>
+    <main>
+        <h2>2. CSS Grid-Layout</h2>
+        <p>Das CSS Grid-Layout ist ein leistungsfähiges Layout-Modul, mit dem sich zweidimensionale Layouts einfach und flexibel umsetzen lassen. Im Gegensatz zu Flexbox, das sich auf eine Achse konzentriert, ermöglicht Grid die Anordnung von Elementen in Zeilen und Spalten. Ein Grid-Container wird mit <code>display: grid</code> aktiviert und kann mit Eigenschaften wie <code>grid-template-columns</code>, <code>grid-template-rows</code> und <code>gap</code> individuell gestaltet werden.</p>
+
+        <h3>1. grid-template-columns</h3>
+        <p>Definiert die Spaltenstruktur des Grids.</p>
+        <p><code>grid-template-columns: 1fr 1fr 1fr;</code></p>
+        <div class="example" id="grid-container1">
+            <div>Spalte 1</div>
+            <div>Spalte 2</div>
+            <div>Spalte 3</div>
+        </div>
+
+        <h3>2. grid-gap (gap)</h3>
+        <p>Bestimmt den Abstand zwischen den Grid-Zellen.</p>
+        <p><code>gap: 12px;</code> im Beispiel oben.</p>
+
+        <h3>3. grid-template-areas</h3>
+        <p>Ermöglicht die benannte Platzierung von Bereichen im Grid.</p>
+        <div class="example" id="grid-area-example">
+            <div class="header">Header</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="content">Content</div>
+            <div class="footer">Footer</div>
+        </div>
+
+        <h3>4. Responsive Grid</h3>
+        <p>Mit <code>repeat()</code> und <code>minmax()</code> können responsive Grids erstellt werden.</p>
+        <pre><code>grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));</code></pre>
+        <div class="example" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+            <div style="background:#ffe082;">A</div>
+            <div style="background:#b2dfdb;">B</div>
+            <div style="background:#ce93d8;">C</div>
+            <div style="background:#ffab91;">D</div>
+        </div>
+        <h3>5. align-items</h3>
+        <p>Mit <code>align-items</code> wird die vertikale Ausrichtung der Grid-Items innerhalb der Zeile festgelegt.</p>
+        <p><code>align-items: center;</code></p>
+        <div class="example" style="height: 120px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; background: #f3e5f5;">
+            <div style="background:#b2dfdb; height:40px;">Oben</div>
+            <div style="background:#ce93d8; height:60px;">Mitte</div>
+            <div style="background:#ffab91; height:30px;">Unten</div>
+        </div>
+    </main>
+</div>
+<footer>
+    <p>Impressum</p>
+</footer>
+</body>
+</html>
